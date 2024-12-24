@@ -1,0 +1,5 @@
+words = ["apple", "sky", "grape", "kiwi", "orange", "straw",
+         "tomato", "carrot", "lettuce", "plane",
+         "pizza", "cloud", "pasta", "cake", "water"]
+a = list(filter(lambda x: any(chototam in x for chototam in "aeiou"), words))
+print(a)
