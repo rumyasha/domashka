@@ -1,0 +1,4 @@
+def reverse(x: str) -> str:
+    return ' '.join(x.split()[::-1])
+print(reverse("Hello world"))
+print(reverse("Python is fun"))
