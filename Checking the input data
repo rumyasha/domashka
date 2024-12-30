@@ -1,0 +1,25 @@
+def validator_chisla(func):
+    def wrapper(number):
+        if number <= 0:
+            return "Invalid input, must be positive"
+        return func(number)
+    return wrapper
+
+
+def validator_stroki(func):
+    def wrapper(string):
+        if len(string) <= 3:
+            return "Invalid input, must be a string with more than 3 characters"
+        return func
+    return wrapper
+@validator_chisla
+def sqquare_number(num):
+    return num**2
+@validator_stroki
+def greet(name):
+    return f"Hello, {name} nice to meet you^_^"
+print(sqquare_number(-5))
+print(sqquare_number(4))
+
+print(greet("Ann"))
+print(greet("Michael jackson"))
